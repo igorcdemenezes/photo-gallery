@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import styles from "./Header.module.css";
 import { Camera } from "lucide-react";
 
-export default function Header() {
-  const [inputText, setInputText] = useState("");
-
+export default function Header({ searchText, setSearchText }) {
   return (
     <header className={styles.containerHeader}>
       <Link to="/" className={styles.logo}>
@@ -22,9 +19,9 @@ export default function Header() {
         </ul>
         <input
           type="text"
-          placeholder="Pesquise por imagens e coleções..."
-          onChange={(e) => setInputText(e.target.value)}
-          value={inputText}
+          placeholder="Pesquise por imagens..."
+          onChange={(e) => setSearchText(e.target.value)}
+          value={searchText}
           className={styles.inputNav}
         />
         <div className={styles.avatar}>
