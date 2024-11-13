@@ -1,0 +1,13 @@
+.title {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.listStyle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  /* border: 1px solid green; */
+}
